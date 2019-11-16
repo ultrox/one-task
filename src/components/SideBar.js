@@ -17,27 +17,55 @@ function SideBar() {
         <SideElement>Home</SideElement>
       </SidebarElements>
       <ReportStyle>
-        <PersonalNotification />
+        <SystemNotification />
       </ReportStyle>
     </SidebarStyles>
   )
 }
 
+const DownloadButtonStyle = styled.a`
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 3rem;
+
+  user-select: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  &:hover {
+    background-color: #2a2f35;
+  }
+`
 const DownloadButton = props => {
-  return <button>{props.children}</button>
+  return <DownloadButtonStyle>{props.children}</DownloadButtonStyle>
 }
 
-const PersonalNotification = () => {
+const SystemNotification = () => {
   return (
-    <div>
-      <h3>Your Monthly Report</h3>
-      <p>Get the info about all your data from previous month</p>
+    <ReportStyle>
+      <ReportTitle>Your Monthly Report</ReportTitle>
+      <ReportStyleMsg>
+        Get the info about all your data from previous month
+      </ReportStyleMsg>
       <DownloadButton>Download PDF</DownloadButton>
-    </div>
+    </ReportStyle>
   )
 }
 
-const ReportStyle = styled.div``
+const ReportStyle = styled.div`
+  border-radius: 5px;
+  padding: 1.3rem;
+  background-color: #3b414a;
+`
+const ReportTitle = styled.h5`
+  font-size: 1.5rem;
+  color: #edf2f7;
+`
+const ReportStyleMsg = styled.p`
+  font-size: 1rem;
+  margin-top: 1rem;
+`
 const SideHeader = styled.div`
   display: flex;
   justify-content: space-between;
