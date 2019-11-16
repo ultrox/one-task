@@ -73,9 +73,14 @@ const SideHeader = styled.div`
 `
 
 const Notifications = () => {
-  return <img src={bellSrc} alt="notification bell" />
+  return <BellIcon src={bellSrc} alt="notification bell" />
 }
 
+const BellIcon = styled.img`
+  &:hover {
+    cursor: pointer;
+  }
+`
 const SideTitle = styled.h4`
   align-self: start;
 `
