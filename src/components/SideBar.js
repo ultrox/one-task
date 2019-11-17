@@ -51,7 +51,10 @@ const SidebarElement = props => {
     display: block;
     color: gray
     text-decoration: none;
-    background-color: ${props => (props.active ? '#19232f' : 'none')}
+  ${props =>
+    props.active
+      ? 'box-shadow: inset 1px 0 0px 0px #00B6EA; background-color: #19232f'
+      : ''}
     &:hover {
       background-color: #19232f;
   }`
