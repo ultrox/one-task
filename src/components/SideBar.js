@@ -8,17 +8,19 @@ export default SideBar
 function SideBar() {
   return (
     <SidebarStyles>
-      <SideHeader>
-        <img src={logoSrc} alt="company logo" />
-        <Notifications />
-      </SideHeader>
-      <SidebarElements>
-        <SideTitle>Dictonaries</SideTitle>
-        <SidebarElement>Overivew</SidebarElement>
-        <SidebarElement active>Create New</SidebarElement>
-        <SidebarElement href="/valid">Valid</SidebarElement>
-        <SidebarElement>Invalid</SidebarElement>
-      </SidebarElements>
+      <div>
+        <SideHeader>
+          <img src={logoSrc} alt="company logo" />
+          <Notifications />
+        </SideHeader>
+        <SidebarElements>
+          <SideTitle>Dictonaries</SideTitle>
+          <SidebarElement>Overivew</SidebarElement>
+          <SidebarElement active>Create New</SidebarElement>
+          <SidebarElement href="/valid">Valid</SidebarElement>
+          <SidebarElement>Invalid</SidebarElement>
+        </SidebarElements>
+      </div>
       <SystemNotification />
     </SidebarStyles>
   )
@@ -55,7 +57,9 @@ const SidebarElement = props => {
   }`
 
   return (
-    <StyledSidebarElement href="#" {...props}>{props.children}</StyledSidebarElement>
+    <StyledSidebarElement href="#" {...props}>
+      {props.children}
+    </StyledSidebarElement>
   )
 }
 
@@ -71,11 +75,11 @@ const SystemNotification = () => {
   )
 }
 
+const SystemNotificationStyles = styled.div``
 const ReportStyle = styled.div`
-  margin-top: 20rem;
   border-radius: 5px;
   padding: 1.3rem;
-  background-color: #1E232D;
+  background-color: #1e232d;
 `
 const ReportTitle = styled.h5`
   font-size: 1.5rem;
@@ -109,7 +113,11 @@ const SidebarElements = styled.div`
 `
 
 const SidebarStyles = styled.aside`
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
   padding: 1.5rem;
+  height: 100vh;
   background-color: #131B24;
   color: #8E98A2;
   flex-shrink: 0;
