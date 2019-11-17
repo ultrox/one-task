@@ -1,0 +1,14 @@
+{
+  "name": "validator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marko Vujanic",
+  "license": "MIT",
+  "scripts": {
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
