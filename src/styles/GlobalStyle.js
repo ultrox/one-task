@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   margin: 0;
-  background: #ccc;
+  background: #e4e5ec;
   font-size: 2rem;
 }
 

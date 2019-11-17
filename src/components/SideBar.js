@@ -75,7 +75,6 @@ const SystemNotification = () => {
   )
 }
 
-const SystemNotificationStyles = styled.div``
 const ReportStyle = styled.div`
   border-radius: 5px;
   padding: 1.3rem;

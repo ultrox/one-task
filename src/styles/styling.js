@@ -5,7 +5,8 @@ export const AppStyle = styled.div`
   display: flex;
 `
 
-export const Content = styled.section`
+export const RightSide = styled.section`
+  width: 100vw;
   @media ${device.tablet} {
     color: gray;
   }
