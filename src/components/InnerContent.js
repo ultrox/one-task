@@ -6,7 +6,6 @@ export default InnerContent
 function InnerContent(props) {
   return (
     <InnerContentStyles>
-      <h1>Hello From Inner content</h1>
       {props.children}
     </InnerContentStyles>
   )

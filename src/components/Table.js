@@ -13,5 +13,4 @@ function Table() {
 
 const Section = styled.div`
   padding: 0.4em;
-  border: 1px solid darkgrey;
 `
