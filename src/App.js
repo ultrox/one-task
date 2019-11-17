@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from './components/SideBar'
 import { GlobalStyle, AppStyle, Content, Section } from './styles'
+import Header from './components/Header'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <SideBar />
       <Content>
+        <Header />
         <Section>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
