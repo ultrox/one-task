@@ -75,7 +75,7 @@ const ReportStyle = styled.div`
   margin-top: 20rem;
   border-radius: 5px;
   padding: 1.3rem;
-  background-color: #3b414a;
+  background-color: #1E232D;
 `
 const ReportTitle = styled.h5`
   font-size: 1.5rem;
