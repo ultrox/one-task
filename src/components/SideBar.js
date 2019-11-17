@@ -14,11 +14,12 @@ function SideBar() {
       </SideHeader>
       <SidebarElements>
         <SideTitle>Dictonaries</SideTitle>
-        <SideElement>Home</SideElement>
+        <SidebarElement>Overivew</SidebarElement>
+        <SidebarElement active>Create New</SidebarElement>
+        <SidebarElement href="/valid">Valid</SidebarElement>
+        <SidebarElement>Invalid</SidebarElement>
       </SidebarElements>
-      <ReportStyle>
-        <SystemNotification />
-      </ReportStyle>
+      <SystemNotification />
     </SidebarStyles>
   )
 }
@@ -41,6 +42,23 @@ const DownloadButton = props => {
   return <DownloadButtonStyle>{props.children}</DownloadButtonStyle>
 }
 
+const SidebarElement = props => {
+  const StyledSidebarElement = styled.a`
+    padding: 0.7rem 2rem;
+    font-size: 1.5rem;
+    display: block;
+    color: gray
+    text-decoration: none;
+    background-color: ${props => (props.active ? '#19232f' : 'none')}
+    &:hover {
+      background-color: #19232f;
+  }`
+
+  return (
+    <StyledSidebarElement href="#" {...props}>{props.children}</StyledSidebarElement>
+  )
+}
+
 const SystemNotification = () => {
   return (
     <ReportStyle>
@@ -54,6 +72,7 @@ const SystemNotification = () => {
 }
 
 const ReportStyle = styled.div`
+  margin-top: 20rem;
   border-radius: 5px;
   padding: 1.3rem;
   background-color: #3b414a;
@@ -87,13 +106,7 @@ const SideTitle = styled.h4`
 
 const SidebarElements = styled.div`
   margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `
-
-const SideElement = styled.div``
 
 const SidebarStyles = styled.aside`
   padding: 1.5rem;
