@@ -4,7 +4,6 @@ import { GlobalStyle, RightSide, AppStyle } from './styles'
 import Header from './components/Header'
 import InnerContent from './components/InnerContent'
 import Table from './components/Table'
-import Tabs from './components/Tabs'
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       <RightSide>
         <Header />
         <InnerContent>
-          <Tabs />
           <Table />
         </InnerContent>
       </RightSide>
